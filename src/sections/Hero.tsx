@@ -6,7 +6,7 @@ import StartIcon from '@/src/assets/icons/star.svg';
 import { HeroOrbit } from '../components/HeroOrbit';
 export const HeroSection = () => {
   return <div className="p-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to bottom,transparent,rgba(0,0,0,0.1),rgba(0,0,0,0.7),transparent)]">
         <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }} />
         <div className=" size-[620px] hero-ring" />
         <div className=" size-[820px] hero-ring" />
