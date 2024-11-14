@@ -1,3 +1,90 @@
+import { SectionHeader } from "../components/SectionHeader";
+import { Card } from "../components/Card";
+import StartIcon from '@/src/assets/icons/star.svg';
+import JsIcon from '@/src/assets/icons/square-js.svg';
+import HtmlIcon from '@/src/assets/icons/html5.svg';
+import CssIcon from "@/src/assets/icons/css3.svg";
+import ReactIcon from "@/src/assets/icons/react.svg";
+import ChromeIcon from "@/src/assets/icons/chrome.svg";
+import GithubIcon from "@/src/assets/icons/github.svg";
+import { TechIcon } from "../components/TechIcon";
+import mapImage from '@/src/assets/images/map.png';
+import smileEmoji from "@/src/assets/images/memoji-smile.png";
+import Image from "next/image";
+import { CardHeader } from "../components/CardHeader";
+const toolboxItems = [
+  {
+    title: "javascript",
+    iconType: JsIcon
+  },
+  {
+    title: "HTML5",
+    iconType: HtmlIcon
+  },
+  {
+    title: "CSS3",
+    iconType: CssIcon
+  },
+  {
+    title: "React",
+    iconType: ReactIcon
+  },
+  {
+    title: "Chrome",
+    iconType: ChromeIcon
+  },
+  {
+    title: "Github",
+    iconType: GithubIcon
+  }
+];
+const hobbies = [
+  {
+    title: 'Music',
+    emoji:'🎶',
+  }
+]
 export const AboutSection = () => {
-  return <div>About Section</div>;
+  return <div className="py-16">
+      <div className="container">
+        <SectionHeader eyebrow="About Me" title="A Glimpse Into My World" description="Learn more about who I am ,What i do and what inspire me ." />
+        <div>
+          <Card>
+          <CardHeader title="My Toolbox" description=" Explore the technologies and tools I use to craft exceptional
+                digital experiences."/>
+            
+            <div>
+            {toolboxItems.map(item =>
+              <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
+                  <span>
+                    <TechIcon component={item.iconType} />
+                  </span>
+                  <span className="font-semibold">
+                    {item.title}
+                  </span>
+                </div>)}
+            </div>
+          </Card>
+        <Card>
+          <CardHeader title="Beyond The Code" description="  Explore My interests and hobbies beyond the digital realm.
+              ."/>
+            <div>
+              {hobbies.map(hobby => <div key={hobby.title}>
+                  <span>
+                    {hobby.title}
+                  </span>
+                  <span>
+                    {hobby.emoji}
+                  </span>
+                </div>)}
+            </div>
+          </Card>
+          <Card>
+            <Image src={mapImage} alt="map" />
+            <Image src={smileEmoji} alt="smiling" />
+          </Card>
+        </div>
+      </div>
+    </div>;
+  
 };
