@@ -46,15 +46,16 @@ const hobbies = [
   }
 ]
 export const AboutSection = () => {
-  return <div className="py-16">
+  return <div className="py-20">
       <div className="container">
         <SectionHeader eyebrow="About Me" title="A Glimpse Into My World" description="Learn more about who I am ,What i do and what inspire me ." />
-        <div>
+        <div className="mt-20 flex flex-col gap-8">
           <Card className="h-[320px] p-0">
           <CardHeader title="My Toolbox" description=" Explore the technologies and tools I use to craft exceptional
                 digital experiences." className="px-6 pt-6"/>
             
-          <Toolbox items={ toolboxItems} className="mt-6" />
+          <Toolbox items={toolboxItems} className="mt-6" />
+          <Toolbox items={ toolboxItems} className="mt-6" itemWrapperClassname="-translate-x-1/2"/>
           </Card>
         <Card>
           <CardHeader title="Beyond The Code" description="  Explore My interests and hobbies beyond the digital realm.
