@@ -12,6 +12,7 @@ import mapImage from '@/src/assets/images/map.png';
 import smileEmoji from "@/src/assets/images/memoji-smile.png";
 import Image from "next/image";
 import { CardHeader } from "../components/CardHeader";
+import { Toolbox } from "../components/ToolBox";
 const toolboxItems = [
   {
     title: "javascript",
@@ -49,21 +50,11 @@ export const AboutSection = () => {
       <div className="container">
         <SectionHeader eyebrow="About Me" title="A Glimpse Into My World" description="Learn more about who I am ,What i do and what inspire me ." />
         <div>
-          <Card>
+          <Card className="h-[320px] p-0">
           <CardHeader title="My Toolbox" description=" Explore the technologies and tools I use to craft exceptional
-                digital experiences."/>
+                digital experiences." className="px-6 pt-6"/>
             
-            <div>
-            {toolboxItems.map(item =>
-              <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
-                  <span>
-                    <TechIcon component={item.iconType} />
-                  </span>
-                  <span className="font-semibold">
-                    {item.title}
-                  </span>
-                </div>)}
-            </div>
+          <Toolbox items={ toolboxItems} className="mt-6" />
           </Card>
         <Card>
           <CardHeader title="Beyond The Code" description="  Explore My interests and hobbies beyond the digital realm.
