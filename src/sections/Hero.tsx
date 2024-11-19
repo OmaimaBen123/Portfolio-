@@ -1,4 +1,4 @@
-import memojiImage from '@/src/assets/images/memoji-computer.png';
+import memojiImage from '@/src/assets/images/coder.png';
 import Image from 'next/image';
 import grainImage from '@/src/assets/images/grain.jpg';
 import SparkelIcon from "@/src/assets/icons/star.svg";
@@ -42,11 +42,11 @@ export const HeroSection = () => {
       </div>
       <div className="container">
         <div className="flex flex-col items-center">
-          <Image src={memojiImage} alt="person peeking from behind laptop" className="size-[100px]" />
+          <Image src={memojiImage} alt="person peeking from behind laptop" className="size-[150px]" />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full"> </div>
             <div className="text-sm font-medium">
-              Availble for new Projects
+              BENHLIMA Omaima
             </div>
           </div>
         </div>

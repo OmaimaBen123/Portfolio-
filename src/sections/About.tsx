@@ -13,6 +13,7 @@ import smileEmoji from "@/src/assets/images/memoji-smile.png";
 import Image from "next/image";
 import { CardHeader } from "../components/CardHeader";
 import { Toolbox } from "../components/ToolBox";
+import phpIcon from  "@/src/assets/icons/php.svg"
 const toolboxItems = [
   {
     title: "javascript",
@@ -37,13 +38,55 @@ const toolboxItems = [
   {
     title: "Github",
     iconType: GithubIcon
-  }
+  },
+   {
+    title: "PHP",
+    iconType: phpIcon 
+  },
 ];
 const hobbies = [
   {
     title: 'Music',
-    emoji:'🎶',
-  }
+    emoji: '🎶',
+    left: '5%',
+    top:'5%',
+  },
+   {
+    title: 'Photography',
+    emoji: '📷',
+    left: '50%',
+    top:'5%',
+  },
+   {
+    title: 'Cooking',
+    emoji: '👩🏻‍🍳',
+    left: '10%',
+    top:'35%',
+  },
+    {
+    title: 'Coding',
+      emoji: '💻',
+    left: '35%',
+    top:'35%',
+  },
+     {
+    title: 'Cycling',
+      emoji: '🚴🏻‍♀️',
+    left: '65%',
+    top:'35%',
+  },
+      {
+    title: 'Dancing',
+      emoji: '🕺🏻',
+    left: '5%',
+    top:'65%',
+  },
+       {
+    title: 'Swiming',
+      emoji: '🏊🏻‍♀️',
+    left: '45%',
+    top:'65%',
+  },
 ]
 export const AboutSection = () => {
   return <div className="py-20">
@@ -57,12 +100,12 @@ export const AboutSection = () => {
           <Toolbox items={toolboxItems} className="mt-6" />
           <Toolbox items={ toolboxItems} className="mt-6" itemWrapperClassname="-translate-x-1/2"/>
           </Card>
-        <Card>
-          <CardHeader title="Beyond The Code" description="  Explore My interests and hobbies beyond the digital realm.
-              ."/>
-            <div>
-              {hobbies.map(hobby => <div key={hobby.title}>
-                  <span>
+        <Card className="h-[320px] p-0 flex flex-col">
+          <CardHeader title="Beyond The Code" description="  Discover my passions and hobbies that extend beyond the digital world.
+              ." className="px-6 pt-6"/>
+            <div className="relative flex-1">
+              {hobbies.map(hobby => <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to sky-400 rounded-full py-1.5 absolute" style={{left:hobby.left,top:hobby.top}}>
+                  <span className="font-medium text-gray-950">
                     {hobby.title}
                   </span>
                   <span>
@@ -71,9 +114,11 @@ export const AboutSection = () => {
                 </div>)}
             </div>
           </Card>
-          <Card>
-            <Image src={mapImage} alt="map" />
-            <Image src={smileEmoji} alt="smiling" />
+          <Card className="h-[320px] p-0 relative">
+          <Image src={mapImage} alt="map" className="h-full w-full object-cover" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
+            <Image src={smileEmoji} alt="smiling" className="size-20" />
+            </div>
           </Card>
         </div>
       </div>
