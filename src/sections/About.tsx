@@ -8,8 +8,8 @@ import ReactIcon from "@/src/assets/icons/react.svg";
 import ChromeIcon from "@/src/assets/icons/chrome.svg";
 import GithubIcon from "@/src/assets/icons/github.svg";
 import { TechIcon } from "../components/TechIcon";
-import mapImage from '@/src/assets/images/map.png';
-import smileEmoji from "@/src/assets/images/memoji-smile.png";
+import mapImage from '@/src/assets/images/map2.png';
+import smileEmoji from "@/src/assets/images/girl2.png";
 import Image from "next/image";
 import { CardHeader } from "../components/CardHeader";
 import { Toolbox } from "../components/ToolBox";
@@ -116,7 +116,7 @@ export const AboutSection = () => {
           </Card>
           <Card className="h-[320px] p-0 relative">
           <Image src={mapImage} alt="map" className="h-full w-full object-cover" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-200 to-sky-500">
             <Image src={smileEmoji} alt="smiling" className="size-20" />
             </div>
           </Card>
